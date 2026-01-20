@@ -6,18 +6,9 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom']
-        }
-      }
-    }
+    minify: 'esbuild'
   },
   server: {
-    port: 3000,
-    strictPort: false,
-    middlewareMode: false
+    port: 3000
   }
 })
