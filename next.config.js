@@ -4,10 +4,6 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  // Ensure CSS is processed correctly
-  webpack: (config) => {
-    return config
-  },
 }
 
 module.exports = nextConfig
