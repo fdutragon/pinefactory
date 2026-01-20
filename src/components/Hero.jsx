@@ -1,16 +1,6 @@
 import React from 'react';
 
 export default function Hero() {
-  const handleTwitter = () => {
-    window.open('https://x.com/felipedutragon', '_blank');
-  };
-
-  const handleWhatsApp = () => {
-    const message = "Olá! Tenho interesse em conhecer mais sobre PineFactory!";
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Effects */}
@@ -34,16 +24,10 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button 
-            onClick={handleTwitter}
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg glow-effect hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-          >
+          <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg glow-effect hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
             Começar Agora
           </button>
-          <button 
-            onClick={handleWhatsApp}
-            className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-          >
+          <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             Ver Demo
           </button>
         </div>
