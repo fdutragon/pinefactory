@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function CTA() {
+  const handleCTA = () => {
+    window.open('https://x.com/felipedutragon', '_blank');
+  };
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto">
@@ -12,7 +16,10 @@ export default function CTA() {
             <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
               Junte-se a centenas de traders que já estão usando PineFactory para automatizar suas estratégias
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg glow-effect hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <button 
+              onClick={handleCTA}
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg glow-effect hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            >
               Acesse Agora - Grátis
             </button>
           </div>

@@ -1,6 +1,30 @@
 import React from 'react';
+import { FaXTwitter, FaDiscord, FaGithub, FaWhatsapp } from 'react-icons/fa6';
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      icon: FaXTwitter,
+      url: 'https://x.com/felipedutragon',
+      label: 'Twitter'
+    },
+    {
+      icon: FaWhatsapp,
+      url: 'https://wa.me/?text=Olá! Tenho interesse em conhecer mais sobre PineFactory!',
+      label: 'WhatsApp'
+    },
+    {
+      icon: FaDiscord,
+      url: '#',
+      label: 'Discord'
+    },
+    {
+      icon: FaGithub,
+      url: '#',
+      label: 'GitHub'
+    }
+  ];
+
   return (
     <footer className="border-t border-slate-700 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -38,10 +62,22 @@ export default function Footer() {
         </div>
         <div className="border-t border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-slate-400 text-sm">
           <p>&copy; 2024 PineFactory. Todos os direitos reservados.</p>
-          <div className="flex gap-4 mt-4 sm:mt-0">
-            <a href="#" className="hover:text-cyan-400 transition">Twitter</a>
-            <a href="#" className="hover:text-cyan-400 transition">Discord</a>
-            <a href="#" className="hover:text-cyan-400 transition">GitHub</a>
+          <div className="flex gap-6 mt-4 sm:mt-0">
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <a 
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-400 transition text-lg"
+                  title={social.label}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
