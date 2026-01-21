@@ -48,15 +48,17 @@ export default function CTA() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="#pricing"
-              className="group px-6 py-3 bg-white text-gray-900 rounded-md font-medium text-base hover:bg-gray-100 transition-colors flex items-center gap-2"
+              href="https://x.com/felipedutragon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold text-base hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Started Now
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              Contact Me
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#features"
-              className="px-6 py-3 bg-transparent text-white rounded-md font-medium text-base hover:bg-white/10 transition-colors border border-white/30"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-base hover:bg-white/20 transition-all duration-300 border border-white/30 shadow-lg hover:shadow-xl"
             >
               View Features
             </a>

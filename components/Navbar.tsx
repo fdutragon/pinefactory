@@ -22,8 +22,8 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 left-0 right-0 ${
         scrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
+          : 'bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -40,18 +40,20 @@ export default function Navbar() {
             <a href="#download" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
               Download
             </a>
-            <a href="#pricing" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-              Pricing
+            <a href="https://x.com/felipedutragon" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              Contact
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <a
-              href="#pricing"
-              className="px-5 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md font-medium text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+              href="https://x.com/felipedutragon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-green-600 text-white rounded-lg font-semibold text-sm hover:from-purple-700 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Buy Now
+              Contact Me
             </a>
           </div>
         </div>

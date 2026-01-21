@@ -5,14 +5,14 @@ import { ArrowRight, Play } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-green-900/20 dark:from-purple-900/40 dark:via-blue-900/40 dark:to-green-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-100/30 via-blue-50/30 to-green-100/30 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-green-900/20" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-200/40 dark:bg-purple-500/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-200/40 dark:bg-green-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
@@ -58,17 +58,19 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="#pricing"
-              className="group px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md font-medium text-base hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center gap-2"
+              href="https://x.com/felipedutragon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-green-600 text-white rounded-lg font-semibold text-base hover:from-purple-700 hover:to-green-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Buy Now
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              Contact Me
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#script-features"
-              className="px-6 py-3 bg-transparent text-gray-900 dark:text-white rounded-md font-medium text-base hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2 border border-gray-300 dark:border-gray-600"
+              className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white rounded-lg font-semibold text-base hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 flex items-center gap-2 border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
-              <Play className="w-4 h-4" />
+              <Play className="w-5 h-5" />
               View Details
             </a>
           </motion.div>

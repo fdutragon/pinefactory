@@ -44,7 +44,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-white dark:bg-gray-900 relative overflow-hidden w-full">
+    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export default function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="group relative p-8 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} p-4 mb-6 group-hover:scale-110 transition-transform`}>
                   <Icon className="w-full h-full text-white" />

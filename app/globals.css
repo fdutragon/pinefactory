@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
   position: relative;
   min-height: 100vh;
 }
@@ -66,4 +66,23 @@ main {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Enhanced button styles */
+.btn-gradient {
+  @apply bg-gradient-to-r from-purple-600 to-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+}
+
+.btn-gradient:hover {
+  @apply from-purple-700 to-green-700;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-2xl hover:scale-[1.02];
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply backdrop-blur-xl bg-white/10 dark:bg-gray-900/10 border border-white/20 dark:border-gray-700/20;
 }

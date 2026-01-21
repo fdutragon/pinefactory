@@ -38,8 +38,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-white transition-colors">
-                  Pricing
+                <a href="https://x.com/felipedutragon" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Contact
                 </a>
               </li>
               <li>
