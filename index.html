@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat com Mensagem Pronta</title>
+</head>
+<body>
+    <button id="chatButton">Enviar Mensagem</button>
+    <button class="plan-button">Plano 1</button>
+    <button class="plan-button">Plano 2</button>
+    <button class="plan-button">Plano 3</button>
+
+    <script>
+        // Substitua pelo ID do usuário do X e pela mensagem desejada
+        const userId = '123456789'; // ID do usuário no X
+        const message = encodeURIComponent('Olá, gostaria de saber mais sobre este plano!');
+        const chatUrl = `https://twitter.com/messages/compose?recipient_id=${userId}&text=${message}`;
+
+        document.getElementById('chatButton').addEventListener('click', () => {
+            window.open(chatUrl, '_blank');
+        });
+
+        // Substituir todos os botões de planos para redirecionar ao chat
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', () => {
+                window.open(chatUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
