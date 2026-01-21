@@ -40,7 +40,7 @@ export default function Navbar() {
             <a href="#download" className="text-foreground hover:text-primary transition-colors">
               Download
             </a>
-            <a href="https://x.com/felipedutragon" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://x.com/felipedutragon" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
           </div>
@@ -49,8 +49,6 @@ export default function Navbar() {
             <ThemeToggle />
             <a
               href="https://x.com/felipedutragon"
-              target="_blank"
-              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-primary to-chart-1 text-primary-foreground rounded-lg font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Me

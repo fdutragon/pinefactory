@@ -49,8 +49,6 @@ export default function CTA() {
           >
             <a
               href="https://x.com/felipedutragon"
-              target="_blank"
-              rel="noopener noreferrer"
               className="group px-8 py-4 bg-background text-foreground rounded-lg font-semibold text-base hover:bg-background/90 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Me

@@ -38,7 +38,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://x.com/felipedutragon" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://x.com/felipedutragon" className="hover:text-primary transition-colors">
                   Contact
                 </a>
               </li>

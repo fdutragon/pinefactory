@@ -59,8 +59,6 @@ export default function Hero() {
           >
             <a
               href="https://x.com/felipedutragon"
-              target="_blank"
-              rel="noopener noreferrer"
               className="group px-8 py-4 bg-gradient-to-r from-primary to-chart-1 text-primary-foreground rounded-lg font-semibold text-base hover:opacity-90 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Me
