@@ -31,12 +31,12 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
           <path
             d="M16 4L12 12H14L16 8L18 12H20L16 4Z"
             fill="currentColor"
-            className="text-purple-600 dark:text-purple-400"
+            className="text-primary"
           />
           <path
             d="M16 10L10 20H14L16 16L18 20H22L16 10Z"
             fill="currentColor"
-            className="text-green-600 dark:text-green-400"
+            className="text-chart-1"
           />
           {/* Simple trunk */}
           <rect
@@ -45,7 +45,7 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
             width="2"
             height="4"
             fill="currentColor"
-            className="text-gray-600 dark:text-gray-400"
+            className="text-muted-foreground"
           />
           {/* Minimalist factory base */}
           <rect
@@ -55,7 +55,7 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
             height="4"
             rx="1"
             fill="currentColor"
-            className="text-gray-700 dark:text-gray-300"
+            className="text-foreground"
           />
           {/* Simple windows */}
           <circle
@@ -63,18 +63,18 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
             cy="26"
             r="0.5"
             fill="currentColor"
-            className="text-purple-600 dark:text-purple-400"
+            className="text-primary"
           />
           <circle
             cx="20"
             cy="26"
             r="0.5"
             fill="currentColor"
-            className="text-purple-600 dark:text-purple-400"
+            className="text-primary"
           />
         </svg>
       </div>
-      <span className={`font-medium text-gray-900 dark:text-white ${textSizes[size]}`}>
+      <span className={`font-medium text-foreground ${textSizes[size]}`}>
         PineFactory
       </span>
     </div>

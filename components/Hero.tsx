@@ -5,14 +5,14 @@ import { ArrowRight, Play } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full bg-gradient-to-br from-background via-background to-muted">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-100/30 via-blue-50/30 to-green-100/30 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-green-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-chart-1/10 to-chart-2/10" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-200/40 dark:bg-purple-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-200/40 dark:bg-green-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-1/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
@@ -25,30 +25,30 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30 rounded-full"
+            className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-primary-foreground bg-primary/20 rounded-full"
           >
-            🚀 Professional Pine Script Strategy
+            🤖 Trading Strategy Automation
           </motion.span>
           
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-green-400 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-chart-1 to-chart-2 bg-clip-text text-transparent"
           >
-            TRUMPUSDT Extreme Reversion
+            I Automate Your Strategy
             <br />
-            <span className="text-4xl md:text-6xl">Professional Pine Script Strategy</span>
+            <span className="text-4xl md:text-6xl">For Automated Trading</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
           >
-            Advanced 1-minute reversion strategy with trailing stops, risk management, 
-            and Binance integration. Maximize profits with professional-grade automation.
+            I transform any manual strategy into automated Pine Script for TradingView. 
+            Risk management, stops, targets and exchange integration - everything customized for you.
           </motion.p>
 
           <motion.div
@@ -61,14 +61,14 @@ export default function Hero() {
               href="https://x.com/felipedutragon"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-green-600 text-white rounded-lg font-semibold text-base hover:from-purple-700 hover:to-green-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="group px-8 py-4 bg-gradient-to-r from-primary to-chart-1 text-primary-foreground rounded-lg font-semibold text-base hover:opacity-90 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Me
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#script-features"
-              className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white rounded-lg font-semibold text-base hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 flex items-center gap-2 border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl backdrop-blur-sm"
+              className="px-8 py-4 bg-card/80 text-card-foreground rounded-lg font-semibold text-base hover:bg-card transition-all duration-300 flex items-center gap-2 border border-border shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               <Play className="w-5 h-5" />
               View Details
@@ -79,19 +79,19 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-400"
+            className="mt-12 flex items-center justify-center gap-8 text-sm text-muted-foreground"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>100% Functional</span>
+              <div className="w-2 h-2 bg-chart-1 rounded-full animate-pulse" />
+              <span>Custom Strategies</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-              <span>Support Included</span>
+              <div className="w-2 h-2 bg-chart-2 rounded-full animate-pulse" />
+              <span>Full Support</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-              <span>Free Updates</span>
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span>Total Automation</span>
             </div>
           </motion.div>
         </motion.div>
@@ -107,12 +107,12 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"
+            className="w-1 h-3 bg-muted-foreground rounded-full mt-2"
           />
         </motion.div>
       </motion.div>

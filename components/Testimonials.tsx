@@ -6,51 +6,51 @@ import { Star, Quote } from 'lucide-react'
 const testimonials = [
   {
     name: 'Carlos Silva',
-    role: 'Professional Trader',
+    role: 'Day Trader',
     image: '👨‍💼',
-    content: 'PineFactory scripts completely transformed my trading. I increased my win rate by 40% and save hours of daily analysis.',
+    content: 'Felipe automated my scalping strategy perfectly. Now my trades run 24h without supervision and results improved by 60%.',
     rating: 5,
   },
   {
     name: 'Ana Costa',
-    role: 'Day Trader',
+    role: 'Swing Trader',
     image: '👩‍💼',
-    content: 'Finally found scripts that actually work! The support is excellent and results exceeded all expectations. 100% recommended.',
+    content: 'Amazing how he managed to translate my complex manual strategy to Pine Script. Support is exceptional and code is clean and efficient.',
     rating: 5,
   },
   {
     name: 'Roberto Santos',
-    role: 'Swing Trader',
+    role: 'Professional Trader',
     image: '👨‍💻',
-    content: 'Invested in the Enterprise plan and it was the best decision. The scripts are professional, well-documented, and VIP support is impeccable. Positive ROI from the first month.',
+    content: 'I automated 3 different strategies with Felipe. All work perfectly integrated with my broker. Positive ROI since the first month.',
     rating: 5,
   },
   {
     name: 'Mariana Oliveira',
     role: 'Beginner Trader',
     image: '👩‍🎓',
-    content: 'As a beginner, I was lost. The scripts helped me understand the market better and I\'m already getting consistent results. The step-by-step guide is perfect!',
+    content: 'As a beginner, he helped me automate a simple but effective strategy. I learned a lot about Pine Script in the process. Highly recommend!',
     rating: 5,
   },
   {
     name: 'Felipe Almeida',
     role: 'Crypto Trader',
     image: '👨‍🚀',
-    content: 'I use the scripts mainly for cryptocurrencies and the results are incredible. The signal accuracy is impressive and I\'ve recovered my investment multiple times.',
+    content: 'Perfect automation for crypto. My arbitrage strategy now runs by itself and captures opportunities I would miss manually.',
     rating: 5,
   },
   {
     name: 'Juliana Ferreira',
-    role: 'Options Trader',
+    role: 'Quantitative Trader',
     image: '👩‍⚖️',
-    content: 'High-quality scripts that truly add value. The documentation is clear and the code is easy to customize. Worth every penny invested.',
+    content: 'High quality code, well documented and optimized. Felipe understands both trading and programming. Long-term partnership guaranteed.',
     rating: 5,
   },
 ]
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden w-full">
+    <section id="testimonials" className="py-24 bg-gradient-to-b from-background to-muted relative overflow-hidden w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,11 +59,11 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-green-400 bg-clip-text text-transparent">
-            What Our Clients Say
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent">
+            What My Clients Say
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Over 1,000 traders trust PineFactory
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Traders who have already automated their strategies with me
           </p>
         </motion.div>
 
@@ -75,26 +75,26 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative"
+              className="bg-card rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative"
             >
-              <Quote className="w-8 h-8 text-purple-500 mb-4 opacity-50" />
+              <Quote className="w-8 h-8 text-primary mb-4 opacity-50" />
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 fill-chart-4 text-chart-4" />
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-green-400 flex items-center justify-center text-2xl">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-chart-1 flex items-center justify-center text-2xl">
                   {testimonial.image}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">
+                  <div className="font-semibold text-foreground">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="text-sm text-muted-foreground">
                     {testimonial.role}
                   </div>
                 </div>

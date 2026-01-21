@@ -23,7 +23,7 @@ const codeSnippets = [
     
     buy_signal ? 1 : sell_signal ? -1 : 0`,
 		icon: TrendingUp,
-		color: 'from-green-400 to-emerald-500',
+		color: 'from-chart-1 to-chart-2',
 	},
 	{
 		id: 'trailing-stop',
@@ -45,7 +45,7 @@ strategy.exit("BUY EXIT", "BUY",
     trail_points=exit_trail_dist, 
     trail_offset=exit_trail_act)`,
 		icon: Shield,
-		color: 'from-blue-400 to-cyan-500',
+		color: 'from-chart-2 to-chart-3',
 	},
 	{
 		id: 'risk-management',
@@ -67,7 +67,7 @@ qty_calc = round_qty(
     calc_qty_from_base(risk_percentage, bank_value), 
     lot_step)`,
 		icon: BarChart3,
-		color: 'from-purple-400 to-pink-500',
+		color: 'from-chart-3 to-chart-4',
 	},
 	{
 		id: 'simulation-mode',
@@ -96,7 +96,7 @@ if simulation_mode and signal != 0
     if simulated_result > 0
         simulation_mode := false`,
 		icon: Zap,
-		color: 'from-yellow-400 to-orange-500',
+		color: 'from-chart-4 to-chart-5',
 	},
 	{
 		id: 'daily-reset',
@@ -120,7 +120,7 @@ if trades_today >= min_trades_daily and
    win_rate_today < min_win_rate_daily
     paused_today_winrate := true`,
 		icon: Settings,
-		color: 'from-indigo-400 to-purple-500',
+		color: 'from-chart-4 to-chart-5',
 	},
 	{
 		id: 'binance-integration',
@@ -139,7 +139,7 @@ strategy.entry("BUY", strategy.long,
     qty=qty_calc, 
     alert_message=entry_payload)`,
 		icon: Code,
-		color: 'from-red-400 to-pink-500',
+		color: 'from-destructive to-chart-5',
 	},
 ]
 
@@ -151,7 +151,7 @@ export default function ScriptFeatures() {
 	return (
 		<section
 			id="script-features"
-			className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden"
+			className="py-24 bg-gradient-to-b from-background to-muted relative overflow-hidden"
 		>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
@@ -161,10 +161,10 @@ export default function ScriptFeatures() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-16"
 				>
-					<h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-green-400 bg-clip-text text-transparent">
+					<h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent">
 						Advanced Features Explained
 					</h2>
-					<p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
 						Discover the powerful features that make this script professional-grade
 					</p>
 				</motion.div>
@@ -186,23 +186,23 @@ export default function ScriptFeatures() {
 									onClick={() => setSelectedFeature(feature.id)}
 									className={`w-full text-left p-5 rounded-md transition-all duration-200 cursor-pointer border ${
 										selectedFeature === feature.id
-											? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-gray-800 dark:border-gray-200 shadow-sm'
-											: 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-transparent hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-200 dark:hover:border-gray-600'
+											? 'bg-foreground text-background border-border shadow-sm'
+											: 'bg-card text-card-foreground border-transparent hover:bg-muted hover:border-border'
 									}`}
 								>
 									<div className="flex items-start gap-4">
 										<div
 											className={`w-10 h-10 rounded-md p-2.5 flex-shrink-0 transition-colors ${
 												selectedFeature === feature.id
-													? 'bg-gray-200 dark:bg-gray-600'
-													: 'bg-gray-100 dark:bg-gray-700'
+													? 'bg-background/20'
+													: 'bg-muted'
 											}`}
 										>
 											<Icon
 												className={`w-full h-full transition-colors ${
 													selectedFeature === feature.id
-														? 'text-gray-900 dark:text-white'
-														: 'text-gray-600 dark:text-gray-300'
+														? 'text-foreground'
+														: 'text-muted-foreground'
 												}`}
 											/>
 										</div>
@@ -210,8 +210,8 @@ export default function ScriptFeatures() {
 											<h3
 												className={`text-xl font-bold mb-2 transition-colors ${
 													selectedFeature === feature.id
-														? 'text-white dark:text-gray-900'
-														: 'text-gray-900 dark:text-white'
+														? 'text-background'
+														: 'text-foreground'
 												}`}
 											>
 												{feature.title}
@@ -219,8 +219,8 @@ export default function ScriptFeatures() {
 											<p
 												className={`text-sm leading-relaxed transition-colors ${
 													selectedFeature === feature.id
-														? 'text-white/90 dark:text-gray-700'
-														: 'text-gray-600 dark:text-gray-300'
+														? 'text-background/90'
+														: 'text-muted-foreground'
 												}`}
 											>
 												{feature.description}
@@ -238,24 +238,24 @@ export default function ScriptFeatures() {
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.3 }}
-						className="bg-gray-900 rounded-xl p-6 shadow-2xl overflow-hidden w-full min-w-0"
+						className="bg-card rounded-xl p-6 shadow-2xl overflow-hidden w-full min-w-0"
 					>
 						<div className="flex items-center justify-between mb-4">
 							<div className="flex items-center gap-2">
-								<div className="w-3 h-3 rounded-full bg-red-500"></div>
-								<div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-								<div className="w-3 h-3 rounded-full bg-green-500"></div>
+								<div className="w-3 h-3 rounded-full bg-destructive"></div>
+								<div className="w-3 h-3 rounded-full bg-chart-4"></div>
+								<div className="w-3 h-3 rounded-full bg-chart-1"></div>
 							</div>
-							<span className="text-gray-400 text-sm font-mono">Pine Script v6</span>
+							<span className="text-muted-foreground text-sm font-mono">Pine Script v6</span>
 						</div>
-						<div className="bg-gray-800 rounded-lg p-4 overflow-x-auto w-full">
-							<pre className="text-sm text-gray-300 font-mono whitespace-pre-wrap break-words">
+						<div className="bg-muted rounded-lg p-4 overflow-x-auto w-full">
+							<pre className="text-sm text-muted-foreground font-mono whitespace-pre-wrap break-words">
 								<code className="block w-full">{selected.code}</code>
 							</pre>
 						</div>
-						<div className="mt-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
-							<p className="text-purple-300 text-sm">
-								<strong className="text-purple-200">💡 Tip:</strong> {selected.description}
+						<div className="mt-4 p-4 bg-primary/20 rounded-lg border border-primary/30">
+							<p className="text-primary-foreground text-sm">
+								<strong className="text-primary-foreground">💡 Tip:</strong> {selected.description}
 							</p>
 						</div>
 					</motion.div>
